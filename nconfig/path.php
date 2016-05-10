@@ -68,3 +68,7 @@ define("CUSTOM_SCRIPT_PATH",APP_PATH_ROOT."nlibrary/script/");
 
 // Set include path
 set_include_path( MODEL_PATH_ROOT . PATH_SEPARATOR . ENV_PATH_ROOT . PATH_SEPARATOR . APP_PATH_ROOT);
+/** Author: Thilagam**/
+/** Date:10/5/2016**/
+/**Reason: To define the BO path for deleting the temp files**/
+define('IMAGE_PATH_BO','/home/sites/site8/web/BO/assets/temp_img');
