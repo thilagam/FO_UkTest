@@ -544,7 +544,7 @@ class ClientController extends Ep_Controller_Action
 					{
 						$morequotes.='<tr>
 										<td><a href="/client/quotes?id='.$quotes[$r]['id'].'">'.utf8_encode($quotes[$r]['title']).'</a></td> 
-										<td><a class="btn btn-small" href="/client/downloadarticlezip?id='.$quotes[$r]['id'].'">Télécharger</a></td>
+										<td><a class="btn btn-small" href="/client/downloadarticlezip?id='.$quotes[$r]['id'].'">Tï¿½lï¿½charger</a></td>
 									</tr>
 									';
 					}
@@ -5994,6 +5994,9 @@ class ClientController extends Ep_Controller_Action
 			$array['verified_status']="YES";
 			$array['type']="client";
 			//print_r($array);exit;
+            // ///adding new fiels 'site' to keep track of traffic from country/// //
+            $array['site']= ($_SESSION['redirectedFrom']) ? $_SESSION['redirectedFrom'] : 'uk';
+            unset($_SESSION['redirectedFrom']);//unset the site session once created a contrib/client//
 			$identifier=$user_obj->InsertUser($array);
 			
 			//UserPlus Insertion
